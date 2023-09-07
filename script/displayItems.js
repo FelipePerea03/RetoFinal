@@ -46,10 +46,10 @@ function displayItems() {
                                   : ''
                               }>Trabajo</option> 
                               <option ${
-                                itemsArray[i].category === 'Emprendimiento'
+                                itemsArray[i].category === 'Estilo de vida'
                                   ? 'selected'
                                   : ''
-                              }>Emprendimiento</option> 
+                              }>Estilo de vida</option> 
                             </select>
                         </div>
                         <div>

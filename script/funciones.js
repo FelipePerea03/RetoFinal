@@ -11,6 +11,7 @@ function crearTarea(item){
         color: "#94D8F6"
     };
 
+
     // Agrega el nuevo elemento al arreglo 'itemsArray'.
     itemsArray.push(nuevoItem);
 
@@ -20,6 +21,7 @@ function crearTarea(item){
     // Recarga la página actual para reflejar los cambios en la lista de elementos.
     location.reload();
 }
+
 
 //Funcion para eliminar una tarea.
 function eliminarTarea(item){
@@ -36,12 +38,17 @@ function countPend(){
     for(let i = 0; i < itemsArray.length; i++){
         if (!itemsArray[i].checked) {
             cant++;
-        }
+        }else  {
+            cant--;
     }
+                       
+    }
+    
 
     localStorage.setItem("items", JSON.stringify(itemsArray));
     return cant;
 }
+
 
 //Funcion para el boton de mostrar todas las tareas.
 function showAll(){
@@ -94,7 +101,7 @@ function showComp(){
 //Funcion para el boton de eliminar tareas completadas.
 
 function borrarCompletados(){
-    //Variable para filtar las tareas macadas.
+    //Variable para filtar las tareas marcadas.
     const tareasCompretadas = itemsArray.filter((item) => item.checked == false);
 
     localStorage.setItem("items", JSON.stringify(tareasCompretadas));
@@ -107,3 +114,7 @@ function actualizarTarea(text, item){
     localStorage.setItem("items", JSON.stringify(itemsArray));
     location.reload();
 }
+
+// const countPend = () => {
+//     return nuevoItem.filter(nuevoItem=>nuevoItem.checked).length 
+// }

@@ -86,6 +86,7 @@ function activateEditListeners() {
     eb.addEventListener('click', () => {
       updateController[i].style.display = 'block'
       inputs[i].disabled = false
+      inputs[i].style.background = "white"
 
       prioritySelects.value = itemsArray[i].priority
       categorySelects.value = itemsArray[i].category
