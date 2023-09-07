@@ -1,0 +1,67 @@
+.todoApp{
+    width: 600px;
+}
+
+.footer{
+    padding: 15px 6px;
+}
+
+.filters{
+    right: 55px;
+}
+
+.filters, .todo-count, .clear-completed {
+    margin: -5px;
+}
+
+.clear-completed{
+    top: -4px;
+}
+
+.filters li a.selected,
+.filters li a.btnPend,
+.filters li a.btnComp,
+#clear-completed{
+    border: #0447ff 2px solid;
+    color: #0447ff;
+    font-weight: 600;
+    transition: 0.59s;
+}
+
+.filters li a.selected:hover,
+.filters li a.btnPend:hover,
+.filters li a.btnComp:hover,
+#clear-completed:hover{
+    background: #0447ff;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.filters li a.btnPend{
+    border-color: #e97c00;
+    color: #e97c00;
+}
+
+.filters li a.btnPend:hover{
+    background-color: #e97c00;
+}
+
+.filters li a.btnComp{
+    border-color: #004d06;
+    color: #004d06;
+}
+
+.filters li a.btnComp:hover{
+    background-color: #004d06;
+}
+
+#clear-completed{
+    border-color: #c90000;
+    color: #c90000;
+    padding: 1.80px 5.80px;
+    border-radius: 4px;
+}
+
+#clear-completed:hover{
+    background-color: #c90000;
+}
